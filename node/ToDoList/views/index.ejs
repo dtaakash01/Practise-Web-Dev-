@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>To Do Lists!</title>
+
+  </head>
+  <body>
+
+    <div class="box" id="heading">
+      <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+
+  <%  for(let i = 0; i < newListItems.length; i++){ %>
+      <div class="items" style="display: flex;">
+
+
+            <input type="checkbox">
+            <p><%= newListItems[i] %></p>
+
+
+      </div>
+      <% } %>
+
+
+
+    <form  class="item" action="/" method="post">
+      <input type="text" name="toDolist" placeholder="To Do List">
+      <button type="submit" name="list" value="<%= listTitle %>">+</button>
+    </form>
+
+
+      </div>
+  </body>
+</html>
